@@ -1,0 +1,14 @@
+<div>
+    <h2>Procesamiento de OCR</h2>
+    <form method="post" (submit)="procesarImagen()" >
+      <input type="file" (change)="capturarFile($event)" />
+      <div>
+        <img [src]="imagenSeleccionada" alt="">
+      </div>
+      <button type="submit">Procesar</button>
+    </form>
+    <div *ngIf="textoOCR">
+      <h3>Resultado:</h3>
+      <p>{{ textoOCR.respuesta }}</p>
+    </div>
+  </div>
