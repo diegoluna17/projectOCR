@@ -1,21 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { OcrComponent } from './ocr/ocr.component';
-
-
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
     AppComponent,
-    OcrComponent,
-    
+    OcrComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

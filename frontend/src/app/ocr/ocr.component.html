@@ -1,14 +1,15 @@
 <div>
     <h2>Procesamiento de OCR</h2>
-    <form method="post" (submit)="procesarImagen()" >
+    <h3>getOCR: {{ocrModel.texto}}</h3>
+    <form method="put" (submit)="procesarImagen()" >
       <input type="file" (change)="capturarFile($event)" />
       <div>
         <img [src]="imagenSeleccionada" alt="">
       </div>
       <button type="submit">Procesar</button>
     </form>
-    <div *ngIf="textoOCR">
+    <div *ngIf="ocrTexto">
       <h3>Resultado:</h3>
-      <p>{{ textoOCR.respuesta }}</p>
+      <p>{{ ocrTexto }}</p>
     </div>
   </div>
