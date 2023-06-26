@@ -6,18 +6,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Ocr {
-
+public class Compara {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	private String texto;
+	private boolean esCopiaOriginal;
 
-	public Ocr() {}
+	public Compara() {}
 
-	public Ocr(String texto) {
-		this.texto = texto;
+	public Compara(boolean esCopiaOriginal) {
+		this.esCopiaOriginal = esCopiaOriginal;
 	}
 
 	public int getId() {
@@ -28,12 +27,17 @@ public class Ocr {
 		this.id = id;
 	}
 
-	public String getTexto() {
-		return texto;
+	public boolean isEsCopiaOriginal() {
+		return esCopiaOriginal;
 	}
 
-	public void setTexto(String texto) {
-		this.texto = texto;
+	public void setEsCopiaOriginal(boolean esCopiaOriginal) {
+		this.esCopiaOriginal = esCopiaOriginal;
 	}
 	
-}	
+	
+	
+	
+	
+	
+}
