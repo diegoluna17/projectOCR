@@ -1,22 +1,14 @@
 package com.trabajofinal.ocr.Service;
 
 import java.util.Optional;
-
 import javax.imageio.ImageIO;
-
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-//import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.trabajofinal.ocr.Entity.Ocr;
 import com.trabajofinal.ocr.Repository.ocrRepository;
-
 import jakarta.transaction.Transactional;
 import net.sourceforge.tess4j.Tesseract;
 

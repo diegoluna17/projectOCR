@@ -38,9 +38,8 @@ public class OcrController {
 		return new ResponseEntity<Ocr>(ocr, HttpStatus.OK);
 	}
 	
-	@PutMapping("/procesar")
+	@PostMapping("/procesar")
 	public ResponseEntity<?> procesarImagen(@RequestPart("img") MultipartFile img) throws IOException{
-		System.out.println("Pase por procesar........................");
 		String resultado = ocrService.procesar(img.getInputStream());
 		System.out.println("Resultado del procesar: " + resultado);
 		Ocr ocr = ocrService.getOne(1).get();

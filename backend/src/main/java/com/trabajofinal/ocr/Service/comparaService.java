@@ -7,13 +7,9 @@ import java.io.InputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Optional;
-
 import javax.imageio.ImageIO;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
-
 import com.trabajofinal.ocr.Entity.Compara;
 import com.trabajofinal.ocr.Repository.comparaRepository;
 
