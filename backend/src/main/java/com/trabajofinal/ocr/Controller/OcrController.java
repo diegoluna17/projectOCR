@@ -62,18 +62,5 @@ public class OcrController {
 		return new ResponseEntity<String>(esCopiaOriginal, HttpStatus.OK);
     }
 	
-//	@GetMapping("/comparar")
-//    public ResponseEntity<Boolean> compararImagenesPorHash(@RequestPart("files") MultipartFile[] files) throws IOException, NoSuchAlgorithmException {
-//        Boolean sonIguales = comparaService.compararImagenesPorHash(files[0].getInputStream(), files[1].getInputStream());
-//		return new ResponseEntity<Boolean>(sonIguales, HttpStatus.OK);
-//    }
-//	
-//	@GetMapping("/compara2")
-//	public ResponseEntity<Compara> compara(@RequestPart("files") MultipartFile[] files) throws IOException, NoSuchAlgorithmException{
-//		Boolean esCopiaOriginal = comparaService.compararImagenesPorHash(files[0].getInputStream(), files[1].getInputStream());
-//		Compara compara = comparaService.getOne(1).get();
-//		compara.setEsCopiaOriginal(esCopiaOriginal);
-//		comparaService.save(compara);
-//		return new ResponseEntity<Compara>(compara, HttpStatus.OK);	
-//	}
+
 }
