@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import spark from 'spark-md5';
 
 @Component({
-  selector: 'app-compara',
-  templateUrl: './compara.component.html',
-  styleUrls: ['./compara.component.css']
+  selector: 'app-compara-imagenes',
+  templateUrl: './compara-imagenes.component.html',
+  styleUrls: ['./compara-imagenes.component.css']
 })
-export class ComparaComponent {
+export class ComparaImagenesComponent {
   image1: File | undefined;
   image2: File | undefined;
 

@@ -2,15 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ComparaComponent } from './compara/compara.component';
+import { ComparaImagenesComponent } from './Components/compara-imagenes/compara-imagenes.component';
+import { TesseractComponent } from './Components/tesseract/tesseract.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComparaComponent
+    ComparaImagenesComponent,
+    TesseractComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
