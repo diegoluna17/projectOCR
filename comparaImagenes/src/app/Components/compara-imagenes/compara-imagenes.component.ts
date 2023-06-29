@@ -31,8 +31,10 @@ export class ComparaImagenesComponent {
       console.log('Hash 2:', hash2);
 
       if (hash1 === hash2) {
+        alert('Las imágenes son idénticas');
         console.log('Las imágenes son idénticas');
       } else {
+        alert('Las imágenes son diferentes');
         console.log('Las imágenes son diferentes');
       }
     } else {

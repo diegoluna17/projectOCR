@@ -11,7 +11,7 @@ export class TesseractComponent implements OnInit, OnDestroy {
   @Output() ocrText = new EventEmitter<string>();
 
   image: File | null = null;
-  lang: string = 'eng'; // eng for English, spa for Spanish
+  lang: string = 'spa'; // eng for English, spa for Spanish
   text: string = '';
   tesseract: TesseractService;
 
