@@ -1,0 +1,43 @@
+===========================================================================
+
+                        Proyecto  project-whit-Tesseract-OCR-and-Hash-MD5-Spring-Boot-Maven-and-Angular-
+
+
+===========================================================================
+
+Este proyecto utiliza código de terceros que está sujeto a diferentes licencias. A continuación se enumeran las bibliotecas utilizadas, junto con sus respectivas licencias y enlaces a las licencias completas:
+
+===========================================================================
+
+Biblioteca: tess4j
+Autor: [Autor del repositorio]
+Repositorio: https://github.com/nguyenq/tess4j
+Licencia: Apache License 2.0
+Enlace a la licencia: https://github.com/nguyenq/tess4j/blob/master/LICENSE
+
+===========================================================================
+
+Biblioteca: jai-imageio-core
+Autor: [Autor del repositorio]
+Repositorio: https://github.com/jai-imageio/jai-imageio-core
+Licencia: GNU General Public License v2.0 (GPLv2)
+Enlace a la licencia: https://github.com/jai-imageio/jai-imageio-core/blob/master/LICENSE.txt
+Enlace a los derechos de autor: https://github.com/jai-imageio/jai-imageio-core/blob/master/COPYRIGHT.txt
+
+===========================================================================
+
+Biblioteca: js-spark-md5
+Autor: [Autor del repositorio]
+Repositorio: https://github.com/satazor/js-spark-md5
+Licencia: WTFPL license
+Enlace a la licencia: https://github.com/satazor/js-spark-md5/blob/master/LICENSE2
+
+===========================================================================
+
+Biblioteca: tesseract.js
+Autor: [Autor del repositorio]
+Repositorio: https://github.com/naptha/tesseract.js
+Licencia: Apache License 2.0
+Enlace a la licencia: https://github.com/naptha/tesseract.js/blob/master/LICENSE.md
+
+===========================================================================
