@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ComparaImagenesComponent } from './Components/compara-imagenes/compara-imagenes.component';
 import { TesseractComponent } from './Components/tesseract/tesseract.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,6 +14,7 @@ import { TesseractComponent } from './Components/tesseract/tesseract.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

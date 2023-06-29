@@ -8,30 +8,40 @@ import { TesseractService } from 'src/app/Service/tesseract.service';
   styleUrls: ['./tesseract.component.css']
 })
 export class TesseractComponent implements OnInit, OnDestroy {
-  @Input() image: string = '';
-  @Input() lang: string = 'eng';  // eng for English, spa for Spanish
+  @Output() ocrText = new EventEmitter<string>();
 
-  @Output() ocrText = new EventEmitter<any>();
+  image: File | null = null;
+  lang: string = 'eng'; // eng for English, spa for Spanish
+  text: string = '';
+  tesseract: TesseractService;
 
-  text = '';
-  tesseract: any;
-
-  constructor() { }
+  constructor(private tesseractService: TesseractService) {
+    this.tesseract = new TesseractService();
+  }
 
   ngOnInit(): void {
-    this.tesseract = new TesseractService();
-    this.ocr();
   }
 
   ngOnDestroy(): void {
-    this.tesseract.terminateWorker()
+    this.tesseract.terminateWorker();
   }
 
-  async ocr() {
-    this.tesseract.imageToText(this.image, this.lang).subscribe((res: any) => {
-      this.text = res;
-      this.ocrText.emit(res);
-      this.tesseract.terminateWorker();
-    });
+  onFileSelected(event: any): void {
+    this.image = event.target.files[0];
+  }
+
+  ocr(): void {
+    if (this.image) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        const imageData = e.target.result;
+        this.tesseractService.imageToText(imageData, this.lang).subscribe((res: string) => {
+          this.text = res;
+          this.ocrText.emit(res);
+          this.tesseractService.terminateWorker();
+        });
+      };
+      reader.readAsDataURL(this.image);
+    }
   }
 }
