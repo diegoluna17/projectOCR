@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="card text center">
+    <div class="card-body">
+      <h2>Implementación de Tesseract.js</h2>
+  
+      <form>
+        <div class="form-group">
+          <label for="imageInput">Seleccionar imagen:</label><br>
+          <input id="imageInput" type="file" (change)="onFileSelected($event)">
+        </div>
+    
+        <div class="form-group">
+          <label for="languageSelect">Idioma:</label><br>
+          <select id="languageSelect" class="form-control" [(ngModel)]="lang" name="lang">
+            <option value="eng">Inglés</option>
+            <option value="spa">Español</option>
+          </select>
+        </div>
+    
+        <button class="btn btn-primary" (click)="ocr()">Procesar Imagen</button>
+      </form>
+    
+      <div *ngIf="text" class="mt-4">
+        <p class="mb-2">Texto OCR:</p>
+        <pre>{{ text }}</pre>
+      </div>
+    </div>
+  </div>
+</div>
